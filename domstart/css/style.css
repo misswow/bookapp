@@ -1,1 +1,25 @@
 @import url(theme.css);
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    width:80%;
+    margin: auto;
+}
+#inputcontainer{
+    margin-top:1vh;
+    padding:30px;
+}
+#inputcontainer div{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aquamarine;
+}
+
+#tablecontainer{
+    margin-top: 5vh;
+    overflow:scroll;
+}
