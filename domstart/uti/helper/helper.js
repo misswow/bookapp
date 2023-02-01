@@ -19,15 +19,15 @@ function gettag(obj){
             input.name=key;
             break;
     }
-    const indiv=document.createElement("div");
+    const indiv=document.createElement("div"); //create div
     
     if(input===null){
         return indiv;
     }
-    const element=document.createElement("label");
-    element.setAttribute("for",key+id);
-    element.innerHTML=key;
-    input.id=type+id;
+    const element=document.createElement("label"); //create label
+    element.setAttribute("for",key+id); // label ki set id
+    element.innerHTML=key; //value name in html
+    input.id=type+id; 
     indiv.appendChild(element);
     indiv.appendChild(input);
     return indiv;
@@ -61,28 +61,27 @@ function getTableTag() {
 function adddata(){
     const Info = [];
     for(let {type,id} of getobjarr()){
-        const tag = document.getElementById(`${type +id}`);
+        const tag = document.getElementById(`${type +id}`); //check type and id ke liye
         if (tag.value){
-            Info.push(tag.value);
+            Info.push(tag.value); 
             tag.value="";
         }
     }
-    console.log(Info);
     return Info;
 }
 function datasend(){
-    const data = adddata();
-    if(data.length!=getobjarr().length){
+    const data = adddata(); //data aagya
+    if(data.length!=getobjarr().length){ //if not all value
         alert("All data is not filled");
     }
     else{
-        const row = document.querySelector("#tablecontainer table tbody");
+        const row = document.querySelector("#tablecontainer table tbody"); //get element by id and class ki jgh
         const tr = document.createElement('tr');
         for(let val of data){
-            const td = document.createElement('td');
+            const td = document.createElement('td'); //td mein value put
             td.innerHTML=val;
             tr.appendChild(td);
         }
-        row.append(tr);
+        row.append(tr); //tr mein value out
     }
 }

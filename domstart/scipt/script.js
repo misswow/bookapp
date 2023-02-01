@@ -15,7 +15,7 @@ inputcontref.appendChild(btn);
 
 btn.addEventListener("click",datasend); //send data
 
-const calldoc=document.getElementById("tablecontainer");
-const table=getTableTag();
-calldoc.appendChild(table);
+const calldoc=document.getElementById("tablecontainer"); //index div idhr aagya
+const table=getTableTag(); //return table bnakr
+calldoc.appendChild(table); 
 
